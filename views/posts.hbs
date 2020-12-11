@@ -1,0 +1,19 @@
+<ol class="posts_list">
+    {{#each post}}
+    <div class="post"><a href="posts/{{this._id}}">{{this._id}}</a>
+        <h2>title: {{this.title}}</h2>
+        <p>Body: {{this.body}}</p>
+    </div>
+    {{/each}}
+</ol>
+
+<br><br>
+<h3> Create new post here:</h3>
+<br>
+<form name="submitForm" action="/posts" method="POST">
+    <label for="title">Title:</label>
+    <input type="text" name="title" id="title" required>
+    <label for="body">Body:</label>
+    <textarea name="body" id="body" cols="30" rows="10" required></textarea>
+    <input type="Submit" value="Submit" />
+</form>

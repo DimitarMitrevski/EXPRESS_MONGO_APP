@@ -1,0 +1,46 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #36c;
+  color:white;
+}
+
+a {
+  color: yellow;
+    display: block;
+    margin: 24px;
+}
+
+h1,h3{
+  text-align: center;
+
+}
+form{
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+input{
+  margin-bottom:20px;
+}
+input[type="submit"] {
+  margin: 10px auto;
+  width: 40%;
+  height: 30px;
+}
+.post{
+  text-align: center;
+    border: 1px solid white;
+    margin: 19px auto;
+}
+button{
+  height: 31px;
+    background: cornflowerblue;
+    color: #fff;
+    border: none;
+    border-radius: 11px;
+}
+.delete{
+  background: red;
+}

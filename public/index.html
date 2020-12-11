@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <title>Blog App</title>
+</head>
+
+<body>
+    <div class="form">
+        <h1>Upload a post</h1>
+        <form name="submitForm" action="/posts" method="POST">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title">
+            <label for="body">Body:</label>
+            <textarea name="body" id="body" cols="30" rows="10"></textarea>
+            <input type="Submit" value="Submit" />
+        </form>
+        <button onclick="document.location.href='/posts'">See All Posts &raquo;</button>
+    </div>
+    <!-- <script type="text/javascript">
+        document.forms["submitForm"].addEventListener('submit', function (e) {
+            e.preventDefault();
+            var title = document.forms["submitForm"]["title"].value;
+            var body = document.forms["submitForm"]["body"].value;
+
+            if (title == "" || body == "") {
+                alert("Title and Body must be filled out");
+                return false;
+            }
+
+            const data = { title: title, body: body };
+
+            fetch('/posts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+            document.forms["submitForm"]["title"].value = "";
+            document.forms["submitForm"]["body"].value = "";
+        }
+            , false);
+
+    </script> -->
+</body>
+
+</html>
